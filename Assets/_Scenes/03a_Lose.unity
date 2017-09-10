@@ -164,10 +164,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 66e21c7321f55c04ba18090bf74b0ae6, type: 3}
-    m_FontSize: 114
+    m_FontSize: 109
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 123
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Glich Garden!
+  m_Text: Glitch Garden!
 --- !u!222 &622793087
 CanvasRenderer:
   m_ObjectHideFlags: 0
