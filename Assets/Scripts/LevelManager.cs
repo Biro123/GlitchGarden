@@ -7,21 +7,31 @@ public class LevelManager : MonoBehaviour {
 
     public float timeInSplash = 7.0f;
 
-    void Start()
-    {
-        string currentScene = SceneManager.GetActiveScene().name;
+    private string currentSceneName;
+    private static int currentbuildIndex;
 
-        if (currentScene == "00_Splash" ) {
+    private void Awake()
+    {
+        currentSceneName = SceneManager.GetActiveScene().name;
+        currentbuildIndex = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    void Start()
+    {               
+        if (currentSceneName == "00_Splash" ) {
             StartCoroutine(Splash());
         }
     }
 
     IEnumerator Splash()
     {
-        print("Before wait:" + Time.time);
         yield return new WaitForSeconds(timeInSplash);
-        print("After wait:" + Time.time);
         LoadNextLevel();
+    }
+
+    public static int GetBuildIndex()
+    {
+        return currentbuildIndex;
     }
 
     public void LoadLevel(string name)
