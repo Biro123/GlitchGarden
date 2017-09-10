@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8be12b9770fad1441b3a717d4070d02f
+timeCreated: 1505005725
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: West Test
+  fontNames:
+  - West Test
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
