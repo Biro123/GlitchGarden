@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Splash/Splash.unity
+    path: Assets/Splash/00_Splash.unity
     guid: e4276c3ef69862f428fd82430f476745
   - enabled: 1
-    path: Assets/_Scenes/Start.unity
+    path: Assets/_Scenes/01a_Start.unity
     guid: 25fc9fc4213b1e942b117ca545307eba
   - enabled: 1
     path: Assets/_Scenes/GameOver.unity
