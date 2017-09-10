@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+    public float timeInSplash = 7.0f;
+
     void Start()
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-        if (currentScene == "Splash" ) {
+        if (currentScene == "00_Splash" ) {
             StartCoroutine(Splash());
         }
     }
@@ -17,7 +19,7 @@ public class LevelManager : MonoBehaviour {
     IEnumerator Splash()
     {
         print("Before wait:" + Time.time);
-        yield return new WaitForSeconds(7.0f);
+        yield return new WaitForSeconds(timeInSplash);
         print("After wait:" + Time.time);
         LoadNextLevel();
     }
