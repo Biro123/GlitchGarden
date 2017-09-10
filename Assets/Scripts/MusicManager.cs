@@ -1,31 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour {
 
     public AudioClip[] levelMusicArray;
 
-    private AudioSource backgroundMusic;
+    private AudioSource backgroundMusic = null;
+    private AudioClip currentMusic = null;
 
-	// Use this for initialization
-	void Start () {
 
-        backgroundMusic = GetComponent<AudioSource>();
-        AudioClip thisLevelMusic = levelMusicArray[LevelManager.GetBuildIndex()];
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
-        if (thisLevelMusic) // If there is some music attached
+    // Use this for initialization
+    void Start () {
+        SceneManager.sceneLoaded += loadScene;
+        backgroundMusic = GetComponent<AudioSource>();        
+	}
+	
+    void loadScene(Scene scene, LoadSceneMode mode)
+    {
+        AudioClip thisLevelMusic = levelMusicArray[scene.buildIndex];
+
+        // If there is some music attached and it isn't already playing
+        if (thisLevelMusic && currentMusic != levelMusicArray[scene.buildIndex]) 
         {
             Debug.Log("THisLevelMusic: " + thisLevelMusic.ToString());
             backgroundMusic.Stop();
             backgroundMusic.clip = thisLevelMusic;
             backgroundMusic.loop = true;
             backgroundMusic.Play();
+            currentMusic = levelMusicArray[scene.buildIndex];
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 }

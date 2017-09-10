@@ -39,8 +39,8 @@ public class LevelManager : MonoBehaviour {
         if (name == "Level_01")
         {
             // TODO is this the right place?
-            ScoreKeeper.score = 0;
-            Lives.lives = 3;
+            //ScoreKeeper.score = 0;
+            //Lives.lives = 3;
         }
 
         SceneManager.LoadScene(name);

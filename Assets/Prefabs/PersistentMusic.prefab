@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114746266746503718}
   - component: {fileID: 82581581476887544}
   m_Layer: 0
-  m_Name: MusicManager
+  m_Name: PersistentMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +135,6 @@ MonoBehaviour:
   levelMusicArray:
   - {fileID: 0}
   - {fileID: 8300000, guid: df9a0b43834e9af459ba0f80383c201d, type: 3}
-  - {fileID: 8300000, guid: df9a0b43834e9af459ba0f80383c201d, type: 3}
+  - {fileID: 0}
   - {fileID: 8300000, guid: df9a0b43834e9af459ba0f80383c201d, type: 3}
   - {fileID: 8300000, guid: 6463d8fcdf2e00543b21b66d214310cb, type: 3}
