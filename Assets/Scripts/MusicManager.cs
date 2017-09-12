@@ -21,7 +21,19 @@ public class MusicManager : MonoBehaviour {
         SceneManager.sceneLoaded += loadScene;
         backgroundMusic = GetComponent<AudioSource>();        
 	}
-	
+
+    public void SetVolume(float volume)
+    {
+        if (volume >= 0 && volume <= 1)
+        {
+            backgroundMusic.volume = volume;
+        }
+        else
+        {
+            Debug.LogError("Volume Change out of bounds");
+        }
+    }
+
     void loadScene(Scene scene, LoadSceneMode mode)
     {
         AudioClip thisLevelMusic = levelMusicArray[scene.buildIndex];
@@ -37,4 +49,5 @@ public class MusicManager : MonoBehaviour {
             currentMusic = levelMusicArray[scene.buildIndex];
         }
     }
+
 }
