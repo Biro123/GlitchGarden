@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour {
 
     IEnumerator Splash()
     {
+        // One way to add a delay
         yield return new WaitForSeconds(timeInSplash);
         LoadNextLevel();
     }
