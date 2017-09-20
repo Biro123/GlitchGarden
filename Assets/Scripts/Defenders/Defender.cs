@@ -16,7 +16,7 @@ public class Defender : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(name + "trigger enter");
+        
     }
 
 }

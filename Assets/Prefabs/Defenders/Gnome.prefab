@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 95955807763346432}
   - component: {fileID: 61855882402128110}
   - component: {fileID: 114198369654909114}
+  - component: {fileID: 114810621270519636}
   m_Layer: 0
   m_Name: Gnome
   m_TagString: Untagged
@@ -181,6 +182,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adf20f47dfa4d84fad4775c42385af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114810621270519636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1749052329520642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdcbfbc3535e64c8f6b133d6c6a84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 120
 --- !u!212 &212610684872030228
 SpriteRenderer:
   m_ObjectHideFlags: 1
