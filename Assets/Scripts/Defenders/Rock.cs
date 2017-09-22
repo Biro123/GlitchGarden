@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // ONLY BEING USED AS A TAG FOR NOW 
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

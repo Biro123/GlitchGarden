@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
+    // ONLY BEING USED AS A TAG FOR NOW 
+
 	// Use this for initialization
 	void Start () {
 		
