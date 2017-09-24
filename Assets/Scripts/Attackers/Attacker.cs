@@ -24,6 +24,8 @@ public class Attacker : MonoBehaviour {
             anim.SetBool("isAttacking", false);
         }
 
+        Debug.Log("selected defender: " + Button.selectedDefender.ToString());
+
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,14 +41,13 @@ public class Attacker : MonoBehaviour {
     // Called from the Animator when in 'attack mode'
     public void StrikeCurrentTarget(float damage)
     {
-        Debug.Log(name + "caused " + damage.ToString() + " damage");
         if (currentTargetHealth)
         {
             currentTargetHealth.TakeDamage(damage);
         }
         else
         {
-            Debug.Log("Target Not Found by: " + name);
+            Debug.LogWarning ("Target Not Found by: " + name);
         }
     }
 

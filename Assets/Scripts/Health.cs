@@ -9,14 +9,11 @@ public class Health : MonoBehaviour {
 
     public void TakeDamage(float damage)
     {
-        Debug.Log(name + "Taking Damage: " + damage.ToString());
-
         health -= damage;
 
         if (health <= 0)
         {
-            // Optionally trigger an animation
-            Debug.Log(name + "Destroyed");
+            // TODO Optionally trigger an animation
             DestroyObject();
         }
 
