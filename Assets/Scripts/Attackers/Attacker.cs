@@ -24,8 +24,6 @@ public class Attacker : MonoBehaviour {
             anim.SetBool("isAttacking", false);
         }
 
-        Debug.Log("selected defender: " + Button.selectedDefender.ToString());
-
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
