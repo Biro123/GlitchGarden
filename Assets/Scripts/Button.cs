@@ -6,11 +6,11 @@ public class Button : MonoBehaviour {
 
     public static GameObject selectedDefender;
     public GameObject defenderPrefab;
-    private SpriteRenderer spriteRenderer;
+    private Button[] buttonArray;
 
     // Use this for initialization
     void Start () {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        buttonArray = GameObject.FindObjectsOfType<Button>();
     }
 	
 	// Update is called once per frame
@@ -20,17 +20,18 @@ public class Button : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        // Set all buttons to black
+        foreach (Button thisButton in buttonArray)
+        {
+            thisButton.GetComponent<SpriteRenderer>().color = Color.black;
+        }
+
+        // set this one to white
         if (defenderPrefab)
         {
-            spriteRenderer.color = new Color(255f, 255f, 255f);
+            GetComponent<SpriteRenderer>().color = Color.white;
             selectedDefender = defenderPrefab;
         }
-    }
-
-    private void OnMouseUp()
-    {
-        // Done differently in video - see TowerSelector Buttons lecture 11:50 (ish)
-        spriteRenderer.color = new Color(0f, 0f, 0f);
     }
 
 }

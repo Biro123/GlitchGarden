@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca7a3935e3a77e4282eb7eb044b8bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seenEverySeconds: 15
 --- !u!114 &114362754454250692
 MonoBehaviour:
   m_ObjectHideFlags: 1

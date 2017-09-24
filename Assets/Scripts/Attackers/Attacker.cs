@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent (typeof (Rigidbody2D))]
 public class Attacker : MonoBehaviour {
 
+    [Tooltip ("Average number of seconds between appearances")]
+    public float seenEverySeconds;
+
     private float currentSpeed;
     private GameObject currentTarget;
     private Health currentTargetHealth;
@@ -55,5 +58,6 @@ public class Attacker : MonoBehaviour {
         currentTarget = obj;
         currentTargetHealth = obj.GetComponent<Health>();
     }
+
 
 }
