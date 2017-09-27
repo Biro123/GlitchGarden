@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class DefenderSpawner : MonoBehaviour {
 
     private Camera myCamera;
-    GameObject defenderParent;
+    private GameObject defenderParent;
+    private StarDisplay starDisplay;
 
     // Use this for initialization
     void Start () {
         myCamera = FindObjectOfType<Camera>();
+        starDisplay = FindObjectOfType<StarDisplay>();
 
         // Create a parent to collect all spawned projectiles under - if not already existing.
         defenderParent = GameObject.Find("Defenders");
@@ -28,22 +30,35 @@ public class DefenderSpawner : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        Vector2 spawnPos = SnapToGrid( CalculateWorldPointOfMouse() );
+        int defenderCost = Button.selectedDefender.GetComponent<Defender>().startCost;
+
+        // NB enums are viewed as static so are accessed by the class not an instance.
+        if (starDisplay.UseStars(defenderCost) == StarDisplay.status.SUCCESS)
+        {
+            spawnDefender();
+        } 
+        else
+        {
+            Debug.Log("not enough stars");
+        }
+    }
+
+    private void spawnDefender()
+    {
+        Vector2 spawnPos = SnapToGrid(CalculateWorldPointOfMouse());
         GameObject defender = Instantiate(Button.selectedDefender, spawnPos, Quaternion.identity);
         defender.transform.SetParent(defenderParent.transform);
     }
 
-    Vector2 CalculateWorldPointOfMouse()
+    private Vector2 CalculateWorldPointOfMouse()
     {
-        return myCamera.ScreenToWorldPoint(Input.mousePosition);
-               
+        return myCamera.ScreenToWorldPoint(Input.mousePosition);               
     }
 
-    Vector2 SnapToGrid (Vector2 worldPos)
+    private Vector2 SnapToGrid (Vector2 worldPos)
     {
         float newX = Mathf.RoundToInt(worldPos.x);
         float newY = Mathf.RoundToInt(worldPos.y);
-
         return new Vector2(newX, newY);
     }
 
