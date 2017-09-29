@@ -41,7 +41,6 @@ public class MusicManager : MonoBehaviour {
         // If there is some music attached and it isn't already playing
         if (thisLevelMusic && currentMusic != levelMusicArray[scene.buildIndex]) 
         {
-            Debug.Log("THisLevelMusic: " + thisLevelMusic.ToString());
             backgroundMusic.Stop();
             backgroundMusic.clip = thisLevelMusic;
             backgroundMusic.loop = true;

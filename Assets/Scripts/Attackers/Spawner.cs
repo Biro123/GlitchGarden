@@ -36,11 +36,8 @@ public class Spawner : MonoBehaviour {
         }
 
         // divide by the number of lanes to give spawn chance overall
-        if (rndNum <= spawnChancePerSecond * Time.deltaTime / 5) {
-            return true;
-        } else {
-            return false;
-        }
+        return (rndNum <= spawnChancePerSecond * Time.deltaTime / 5);
+
     }
 
     void Spawn(GameObject myGameObject)
