@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adf20f47dfa4d84fad4775c42385af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCost: 40
 --- !u!114 &114278220737098276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccdcbfbc3535e64c8f6b133d6c6a84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 120
+  health: 80
 --- !u!212 &212610684872030228
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccdcbfbc3535e64c8f6b133d6c6a84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 100
 --- !u!114 &114586991865836946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adf20f47dfa4d84fad4775c42385af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCost: 25
 --- !u!212 &212470528419229372
 SpriteRenderer:
   m_ObjectHideFlags: 1
