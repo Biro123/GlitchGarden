@@ -84,5 +84,12 @@ public class Shooter : MonoBehaviour {
 
     }
 
+    private void FrogFire()
+    {
+        GameObject newProjectile = Instantiate(projectile, gun.transform.position, Quaternion.identity);
+        newProjectile.transform.parent = projectileParent.transform;
+        Destroy(newProjectile, 0.8f);
+    }
+
 
 }

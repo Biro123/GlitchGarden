@@ -150,7 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccdcbfbc3535e64c8f6b133d6c6a84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
+  health: 60
+  particle: {fileID: 0}
+  graveStonePrefab: {fileID: 0}
 --- !u!212 &212847344390065614
 SpriteRenderer:
   m_ObjectHideFlags: 1

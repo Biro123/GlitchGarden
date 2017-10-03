@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("collision");
         Attacker attacker = collision.GetComponent<Attacker>();
         Health health = collision.GetComponent<Health>();
 
@@ -26,6 +27,21 @@ public class Projectile : MonoBehaviour {
         {
             health.TakeDamage(damage);
             Destroy(gameObject);
+        }
+
+    }
+
+
+    private void OnParticleCollision(GameObject collision)
+    {
+        Debug.Log("ParticleCollision: " + collision.name);
+
+        Attacker attacker = collision.GetComponent<Attacker>();
+        Health health = collision.GetComponent<Health>();
+
+        if (attacker && health)
+        {
+            health.TakeDamage(damage);
         }
 
     }

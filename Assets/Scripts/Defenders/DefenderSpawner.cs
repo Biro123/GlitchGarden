@@ -31,6 +31,21 @@ public class DefenderSpawner : MonoBehaviour {
     private void OnMouseDown()
     {
         int defenderCost = Button.selectedDefender.GetComponent<Defender>().startCost;
+        Frog frog = Button.selectedDefender.GetComponent<Frog>();
+        
+        if (frog)
+        {
+            if (frog.GetFrogUsed())
+            {
+                return;
+            } else
+            {
+                spawnDefender();
+                frog.SetFrogUsed();
+                GameObject frogButton = GameObject.Find("FrogButton");
+                frogButton.GetComponent<SpriteRenderer>().sprite = null;
+            }
+        }
 
         // NB enums are viewed as static so are accessed by the class not an instance.
         if (starDisplay.UseStars(defenderCost) == StarDisplay.status.SUCCESS)

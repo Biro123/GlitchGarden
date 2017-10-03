@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  particle: {fileID: 1441569841180786, guid: 645af8cc1da07b04683dbc48646cf29f, type: 2}
+  graveStonePrefab: {fileID: 0}
 --- !u!114 &114765052530127858
 MonoBehaviour:
   m_ObjectHideFlags: 1

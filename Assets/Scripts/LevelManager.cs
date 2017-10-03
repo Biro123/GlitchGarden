@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour {
 
     private string currentSceneName;
     private static int currentbuildIndex;
+    private bool isPaused;
 
     private void Awake()
     {
@@ -59,9 +60,24 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
-
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         throw new System.NotImplementedException();
     }
+
+    public void PausePressed()
+    {
+
+        if (isPaused)
+        {
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            isPaused = true;
+        }
+    }
+
 }
