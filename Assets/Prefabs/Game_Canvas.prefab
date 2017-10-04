@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 114860886780600342}
   - component: {fileID: 114443227050882940}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +128,24 @@ GameObject:
   - component: {fileID: 114525560605439490}
   m_Layer: 5
   m_Name: CoreGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1355334514014258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224270935542475218}
+  - component: {fileID: 222720356271906376}
+  - component: {fileID: 114076826467385994}
+  - component: {fileID: 114533712581244290}
+  m_Layer: 5
+  m_Name: YouWin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +247,7 @@ GameObject:
   - component: {fileID: 114512461055825094}
   - component: {fileID: 114173843387110100}
   m_Layer: 5
-  m_Name: YouWin
+  m_Name: StartPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,6 +391,39 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Time Remaining:'
+--- !u!114 &114076826467385994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355334514014258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9453549, g: 0.9485294, b: 0.71837157, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 66e21c7321f55c04ba18090bf74b0ae6, type: 3}
+    m_FontSize: 169
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 224
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Level Complete!
 --- !u!114 &114092503661528242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,6 +730,59 @@ MonoBehaviour:
     y: 0.32
     width: 6
     height: 3.375
+--- !u!114 &114533712581244290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355334514014258}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.9453549, g: 0.9485294, b: 0.71837157, a: 1}
+    m_HighlightedColor: {r: 0.94290835, g: 0.9485294, b: 0.316, a: 1}
+    m_PressedColor: {r: 0.959957, g: 0.553, b: 0.02238324, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 114076826467385994}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114595967656608850, guid: f86b92084c895b9429c59385896fbdfd,
+          type: 2}
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 01b_Options
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114643480581336868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -866,6 +970,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150213660918976}
+--- !u!222 &222720356271906376
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355334514014258}
 --- !u!222 &222747288084946532
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -909,12 +1019,13 @@ RectTransform:
   m_LocalScale: {x: 0.0075, y: 0.0075, z: 1}
   m_Children:
   - {fileID: 224562647192989070}
-  - {fileID: 224510583334341688}
+  - {fileID: 224270935542475218}
   - {fileID: 224387990006040794}
   - {fileID: 224669751779921566}
   - {fileID: 224913300534020364}
   - {fileID: 224731514928179742}
   - {fileID: 224186751424814104}
+  - {fileID: 224510583334341688}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -959,6 +1070,24 @@ RectTransform:
   m_AnchoredPosition: {x: 532, y: 394.25}
   m_SizeDelta: {x: 123.2, y: 113.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224270935542475218
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355334514014258}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224043935472321976}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1344.3, y: 913.45}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224387990006040794
 RectTransform:
   m_ObjectHideFlags: 1
@@ -988,11 +1117,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224043935472321976}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000012397766, y: -0.0000052452087}
   m_SizeDelta: {x: 1344.3, y: 913.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224562647192989070
@@ -1028,7 +1157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106.4, y: 395.5}
+  m_AnchoredPosition: {x: 255, y: 395.5}
   m_SizeDelta: {x: 320.9, y: 83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224678573731788652

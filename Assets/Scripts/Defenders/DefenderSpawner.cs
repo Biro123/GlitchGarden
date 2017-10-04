@@ -30,6 +30,8 @@ public class DefenderSpawner : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        if (!Button.selectedDefender) { return; }
+
         int defenderCost = Button.selectedDefender.GetComponent<Defender>().startCost;
         Frog frog = Button.selectedDefender.GetComponent<Frog>();
         

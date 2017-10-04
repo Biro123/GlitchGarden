@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour {
 
     private string currentSceneName;
     private static int currentbuildIndex;
-    private bool isPaused;
+    private GameObject startPanel;
 
     private void Awake()
     {
@@ -22,6 +22,14 @@ public class LevelManager : MonoBehaviour {
         if (currentSceneName == "00_Splash" ) {
             StartCoroutine(Splash());
         }
+        else
+        {
+            FindStartPanel();
+            if (startPanel)
+            {
+                PausePressed();
+            }
+        }
     }
 
     IEnumerator Splash()
@@ -31,6 +39,17 @@ public class LevelManager : MonoBehaviour {
         LoadNextLevel();
     }
 
+    private void FindStartPanel()
+    {
+        startPanel = GameObject.Find("StartPanel");
+
+        if (!startPanel)
+        {
+            Debug.LogWarning("StartPanel is missing");
+        }
+    }
+
+
     public static int GetBuildIndex()
     {
         return currentbuildIndex;
@@ -38,13 +57,6 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadLevel(string name)
     {
-        if (name == "Level_01")
-        {
-            // TODO is this the right place?
-            //ScoreKeeper.score = 0;
-            //Lives.lives = 3;
-        }
-
         SceneManager.LoadScene(name);
     }
 
@@ -67,17 +79,15 @@ public class LevelManager : MonoBehaviour {
 
     public void PausePressed()
     {
+        Time.timeScale = 0;
+        startPanel.SetActive(true);
+    }
 
-        if (isPaused)
-        {
-            Time.timeScale = 1;
-            isPaused = false;
-        }
-        else
-        {
-            Time.timeScale = 0;
-            isPaused = true;
-        }
+    public void PlayPressed()
+    {
+        Time.timeScale = 1;
+        FindStartPanel(); // not sure why I have to re-find - but won't work otherwise.
+        startPanel.SetActive(false);
     }
 
 }

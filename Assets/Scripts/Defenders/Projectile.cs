@@ -28,14 +28,11 @@ public class Projectile : MonoBehaviour {
             health.TakeDamage(damage);
             Destroy(gameObject);
         }
-
     }
 
 
     private void OnParticleCollision(GameObject collision)
     {
-        Debug.Log("ParticleCollision: " + collision.name);
-
         Attacker attacker = collision.GetComponent<Attacker>();
         Health health = collision.GetComponent<Health>();
 

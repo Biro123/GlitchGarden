@@ -8,10 +8,28 @@ public class Health : MonoBehaviour {
     public float health = 100f;
     public GameObject particle;
     public GameObject graveStonePrefab;
+    private float damageModifier = 1;
+    
+
+    public void Start()
+    {
+        float difficulty = PlayerPrefsManager.getDifficulty();
+        damageModifier = (difficulty * 0.2f) - 0.4f; 
+    }
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        float damageTaken = damage;
+
+        if (gameObject.GetComponent<Defender>())
+        {
+            damageTaken = damage * (1 + damageModifier);
+        } else
+        {
+            damageTaken = damage * (1 - damageModifier);
+        }
+
+        health -= damageTaken;
 
         if (health <= 0)
         {

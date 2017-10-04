@@ -571,10 +571,50 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224669751779921566, guid: dcb810b16df063947a31ede739d0bece,
+    - target: {fileID: 114512461055825094, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 255
+      propertyPath: m_Text
+      value: 'Level 1
+
+
+        New Defenders: Cactus
+
+
+        Play'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512461055825094, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512461055825094, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.959957
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512461055825094, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512461055825094, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.02238324
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960810055832298, guid: dcb810b16df063947a31ede739d0bece, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173843387110100, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173843387110100, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcb810b16df063947a31ede739d0bece, type: 2}

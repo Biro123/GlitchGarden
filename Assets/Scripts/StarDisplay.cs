@@ -27,7 +27,6 @@ public class StarDisplay : MonoBehaviour {
 
     public status UseStars(int amount)
     {
-        print("stars used: " + amount.ToString());
         if (starCount >= amount)
         {
             starCount -= amount;
