@@ -23,6 +23,8 @@ public class Button : MonoBehaviour {
 
         costText.text = defenderPrefab.GetComponent<Defender>().startCost.ToString();
 
+        selectedDefender = null;
+
     }
 	
 	// Update is called once per frame

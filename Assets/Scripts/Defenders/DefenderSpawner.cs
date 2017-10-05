@@ -54,10 +54,6 @@ public class DefenderSpawner : MonoBehaviour {
         {
             spawnDefender();
         } 
-        else
-        {
-            Debug.Log("not enough stars");
-        }
     }
 
     private void spawnDefender()

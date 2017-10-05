@@ -17,7 +17,6 @@ public class StarDisplay : MonoBehaviour {
     }
 	
     public void AddStars(int amount ) {
-        print("stars added: " + amount.ToString());
         if (amount > 0)
         {
             starCount += amount;
