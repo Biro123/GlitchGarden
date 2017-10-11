@@ -588,27 +588,27 @@ Prefab:
     - target: {fileID: 224962478798874198, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224962478798874198, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224913883146091724, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224913883146091724, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224913883146091724, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114512461055825094, guid: dcb810b16df063947a31ede739d0bece,
         type: 2}
@@ -653,6 +653,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114485912423435950, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: gameLengthSeconds
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcb810b16df063947a31ede739d0bece, type: 2}

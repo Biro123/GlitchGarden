@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class LevelManager : MonoBehaviour {
 
     public float timeInSplash = 7.0f;
@@ -68,7 +69,7 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadNextLevel()
     {
-        /// buildindex is from build settings.
+         /// buildindex is from build settings.
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     

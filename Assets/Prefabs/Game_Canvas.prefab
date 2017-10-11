@@ -468,7 +468,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1960810055832298}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114595967656608850, guid: f86b92084c895b9429c59385896fbdfd,
           type: 2}
-        m_MethodName: LoadNextLevel
+        m_MethodName: PlayPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea05fdae9dbb6c4fa1a106193970535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLengthSeconds: 100
+  gameLengthSeconds: 80
 --- !u!114 &114512461055825094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9453549, g: 0.9485294, b: 0.71837157, a: 1}
+  m_Color: {r: 0.959957, g: 0.553, b: 0.02238324, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -681,7 +681,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 66e21c7321f55c04ba18090bf74b0ae6, type: 3}
-    m_FontSize: 169
+    m_FontSize: 78
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -692,7 +692,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level Complete!
+  m_Text: 'Level Five
+
+
+    Warning, Incoming Horde!
+
+
+    Play'
 --- !u!114 &114525560605439490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1113,7 +1119,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1960810055832298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224043935472321976}

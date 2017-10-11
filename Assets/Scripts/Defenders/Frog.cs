@@ -8,9 +8,9 @@ public class Frog : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        
 	}
-	
+
     public void SetFrogUsed()
     {
         frogUsed = true;

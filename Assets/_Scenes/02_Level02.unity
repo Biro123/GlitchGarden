@@ -902,6 +902,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114485912423435950, guid: dcb810b16df063947a31ede739d0bece,
+        type: 2}
+      propertyPath: gameLengthSeconds
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcb810b16df063947a31ede739d0bece, type: 2}
   m_IsPrefabParent: 0

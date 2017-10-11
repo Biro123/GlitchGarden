@@ -30,22 +30,24 @@ public class DefenderSpawner : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        GameObject startPanel = GameObject.Find("StartPanel");
+        if (startPanel) { return; } // check if paused (ie startpanel active)
         if (!Button.selectedDefender) { return; }
-
+        
         int defenderCost = Button.selectedDefender.GetComponent<Defender>().startCost;
         Frog frog = Button.selectedDefender.GetComponent<Frog>();
         
         if (frog)
         {
-            if (frog.GetFrogUsed())
+            GameObject frogButton = GameObject.Find("FrogButton");
+            SpriteRenderer frogSpriteRenderer = frogButton.GetComponent<SpriteRenderer>();
+            if( frogSpriteRenderer.sprite == null)
             {
                 return;
             } else
             {
                 spawnDefender();
-                frog.SetFrogUsed();
-                GameObject frogButton = GameObject.Find("FrogButton");
-                frogButton.GetComponent<SpriteRenderer>().sprite = null;
+                frogSpriteRenderer.sprite = null;
             }
         }
 
@@ -70,8 +72,8 @@ public class DefenderSpawner : MonoBehaviour {
 
     private Vector2 SnapToGrid (Vector2 worldPos)
     {
-        float newX = Mathf.RoundToInt(worldPos.x);
-        float newY = Mathf.RoundToInt(worldPos.y);
+        float newX = Mathf.Clamp(Mathf.RoundToInt(worldPos.x),1,9);
+        float newY = Mathf.Clamp(Mathf.RoundToInt(worldPos.y),1,5);
         return new Vector2(newX, newY);
     }
 

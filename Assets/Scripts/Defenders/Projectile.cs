@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision");
+        Debug.Log(this.name + " Trighits " + collision.name);
         Attacker attacker = collision.GetComponent<Attacker>();
         Health health = collision.GetComponent<Health>();
 
@@ -33,12 +33,17 @@ public class Projectile : MonoBehaviour {
 
     private void OnParticleCollision(GameObject collision)
     {
+        Debug.Log(this.name + " Parthits " + collision.name);
         Attacker attacker = collision.GetComponent<Attacker>();
         Health health = collision.GetComponent<Health>();
+        Projectile projectile = collision.GetComponent<Projectile>();
+        ParticleSystem particleSystem = collision.GetComponent<ParticleSystem>();
 
-        if (attacker && health)
+        if (particleSystem) { return; } // don't destroy Frog's particle emitter.
+        if (health || projectile)
         {
-            health.TakeDamage(damage);
+            Debug.Log("Destroying " + collision.name);
+            Destroy(collision.gameObject);
         }
 
     }
