@@ -19,7 +19,12 @@ public class LevelManager : MonoBehaviour {
     }
 
     void Start()
-    {               
+    {   
+        if (currentSceneName.Substring(0, 2) == "02")
+        {
+            PlayerPrefsManager.SetCurrentLevel(currentSceneName);
+        }
+
         if (currentSceneName == "00_Splash" ) {
             StartCoroutine(Splash());
         }
@@ -54,6 +59,16 @@ public class LevelManager : MonoBehaviour {
     public static int GetBuildIndex()
     {
         return currentbuildIndex;
+    }
+
+    public void Replay()
+    {
+        string lastLevel = PlayerPrefsManager.getCurrentLevel();
+
+        if (lastLevel.Substring(0, 2) == "02")
+        {
+            LoadLevel(lastLevel);
+        }
     }
 
     public void LoadLevel(string name)

@@ -9,6 +9,7 @@ public class PlayerPrefsManager : MonoBehaviour
     const string MASTER_VOLUME_KEY = "master_volume";
     const string DIFFICULTY_KEY = "difficulty";
     const string LEVEL_KEY = "level_unlocked_";
+    const string CURR_LEVEL = "current_level";
 
     public static void SetMasterVolume(float volume)
     {
@@ -66,5 +67,15 @@ public class PlayerPrefsManager : MonoBehaviour
     public static float getDifficulty()
     {
         return PlayerPrefs.GetFloat(DIFFICULTY_KEY);
+    }
+
+    public static void SetCurrentLevel(string level)
+    {
+        PlayerPrefs.SetString(CURR_LEVEL, level);
+    }
+
+    public static string getCurrentLevel()
+    {
+        return PlayerPrefs.GetString(CURR_LEVEL);
     }
 }
