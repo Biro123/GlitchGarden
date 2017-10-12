@@ -19,7 +19,8 @@ public class MusicManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         SceneManager.sceneLoaded += loadScene;
-        backgroundMusic = GetComponent<AudioSource>();        
+        backgroundMusic = GetComponent<AudioSource>();
+        backgroundMusic.volume = PlayerPrefsManager.GetMasterVolume();
 	}
 
     public void SetVolume(float volume)

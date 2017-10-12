@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,10 +49,22 @@ public class GameTimer : MonoBehaviour {
 
     private void LevelWon()
     {
+        DestroyAllTaggedObjects();
         isEndOfLevel = true;
         audioSource.Play();
         youWin.SetActive(true);
         Invoke("LoadNextLevel", audioSource.clip.length);        
+    }
+
+    // Destroys all objects with 'destroyOnWin' tag
+    private void DestroyAllTaggedObjects()
+    {
+        GameObject[] taggedObjectArray = GameObject.FindGameObjectsWithTag("destroyOnWin");
+        foreach(GameObject objectToDestroy in taggedObjectArray)
+        {
+            Destroy(objectToDestroy);
+        }
+
     }
 
     private void LoadNextLevel()

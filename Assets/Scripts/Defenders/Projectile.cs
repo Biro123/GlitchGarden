@@ -19,7 +19,6 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(this.name + " Trighits " + collision.name);
         Attacker attacker = collision.GetComponent<Attacker>();
         Health health = collision.GetComponent<Health>();
 

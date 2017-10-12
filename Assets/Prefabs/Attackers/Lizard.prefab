@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114252607485762342}
   m_Layer: 0
   m_Name: Lizard
-  m_TagString: Untagged
+  m_TagString: destroyOnWin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   particle: {fileID: 1441569841180786, guid: e24e2bf692204714a8b932499c17f8c1, type: 2}
+  graveStonePrefab: {fileID: 0}
 --- !u!114 &114570920996638956
 MonoBehaviour:
   m_ObjectHideFlags: 1
